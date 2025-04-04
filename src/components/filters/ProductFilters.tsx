@@ -1,7 +1,7 @@
 // src/components/filters/ProductFilters.tsx
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 interface ProductFiltersProps {
   onFiltersChange: (filters: { category?: string; priceRange?: { min?: number; max?: number }; sortBy?: string }) => void;
@@ -16,25 +16,25 @@ const ProductFilters: React.FC<ProductFiltersProps> = ({ onFiltersChange, initia
   const handleCategoryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const newCategory = event.target.value;
     setCategory(newCategory);
-    onFiltersChange({ category: newCategory }); // Call directly on change
+    onFiltersChange({ category: newCategory }); 
   };
   
   const handleMinPriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newMinPrice = event.target.value ? parseInt(event.target.value, 10) : undefined;
     setMinPrice(newMinPrice);
-    onFiltersChange({ priceRange: { min: newMinPrice, max: maxPrice } }); // Call directly on change
+    onFiltersChange({ priceRange: { min: newMinPrice, max: maxPrice } });
   };
   
   const handleMaxPriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newMaxPrice = event.target.value ? parseInt(event.target.value, 10) : undefined;
     setMaxPrice(newMaxPrice);
-    onFiltersChange({ priceRange: { min: minPrice, max: newMaxPrice } }); // Call directly on change
+    onFiltersChange({ priceRange: { min: minPrice, max: newMaxPrice } }); 
   };
   
   const handleSortByChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const newSortBy = event.target.value;
     setSortBy(newSortBy);
-    onFiltersChange({ sortBy: newSortBy }); // Call directly on change
+    onFiltersChange({ sortBy: newSortBy }); 
   };
   
   // Remove this useEffect entirely!
@@ -57,9 +57,9 @@ const ProductFilters: React.FC<ProductFiltersProps> = ({ onFiltersChange, initia
           <option value="">All</option>
           <option value="electronics">Electronics</option>
           <option value="jewelery">Jewelery</option>
-          <option value="men's clothing">Men's Clothing</option>
-          <option value="women's clothing">Women's Clothing</option>
-          {/* Add more categories as needed */}
+          <option value="men's clothing">Men&rsquo;s Clothing</option>
+          <option value="women's clothing">Women&rsquo;s Clothing</option>
+         
         </select>
       </div>
 
@@ -97,7 +97,7 @@ const ProductFilters: React.FC<ProductFiltersProps> = ({ onFiltersChange, initia
           <option value="">Default</option>
           <option value="price-asc">Price: Low to High</option>
           <option value="price-desc">Price: High to Low</option>
-          {/* Add more sorting options as needed */}
+         
         </select>
       </div>
     </div>

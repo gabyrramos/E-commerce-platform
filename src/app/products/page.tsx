@@ -5,7 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import ProductCard from "@/ui/products/ProductCard";
 import ProductFilters from "@/components/filters/ProductFilters";
 import { useState, useMemo } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
 interface Filters {

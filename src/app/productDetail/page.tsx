@@ -26,7 +26,7 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ params }) => {
         }
         const data = (await response.json()) as Product;
         setProduct(data);
-      } catch (err: any) {
+      } catch (err) {
         setError('Failed to load product details.');
         console.error(err);
       } finally {
