@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Plataforma de E-commerce
+Esta es una plataforma de e-commerce construida con Next.js, React y Tailwind CSS, diseñada para ofrecer una experiencia de compra dinámica, responsiva y moderna. La aplicación se integra con una API falsa para obtener los datos de los productos, permitiendo a los usuarios navegar por los productos, aplicar filtros y ver información detallada de cada producto.
 
-## Getting Started
+## Características
+Página Principal Dinámica: La página principal obtiene y muestra dinámicamente la lista de productos desde una API externa, asegurando actualizaciones en tiempo real y una interacción fluida con el usuario.
 
-First, run the development server:
+- **Lista de Productos**: Página de listado de productos donde se muestran los productos en una cuadrícula, con un diseño optimizado y estilizado usando Tailwind CSS.
 
-```bash
+- **Filtrado de Productos**: Implementación de componentes de filtro que permiten a los usuarios filtrar los productos por categorías, rango de precio y otras características del producto.
+
+- **Estilos con Tailwind CSS**: La interfaz de usuario es completamente responsiva, aprovechando el enfoque de "utility-first" de Tailwind CSS para un diseño limpio y moderno.
+
+- **Integración con API**: Se ha integrado exitosamente con una API falsa para obtener datos de productos, incluyendo detalles como nombre, precio, descripción e imágenes.
+
+## Trabajo en Progreso
+- **Página de Detalle de Producto**: Actualmente trabajando en la página de detalle de producto, que mostrará una vista detallada de cada producto. Esta página obtendrá datos específicos de cada producto cuando sea seleccionado desde la lista de productos.
+
+## Tecnologías Utilizadas
+- **Next.js**: Un framework de React para construir aplicaciones con renderizado del lado del servidor y optimización estática.
+
+- **React**: Una biblioteca de JavaScript para construir interfaces de usuario.
+
+- **Tailwind CSS**: Un framework CSS basado en utilidades para un desarrollo de UI rápido.
+
+- **API Falsa**: La aplicación consume una API falsa para obtener datos de productos, proporcionando una experiencia de e-commerce realista.
+
+## Instalación
+Para empezar con el proyecto localmente, sigue estos pasos:
+
+1. Clona el repositorio:
+
+git clone https://github.com/gabyrramos/E-commerce-platform.git
+2. Instala las dependencias:
+
+cd E-commerce-platform
+npm install
+3. Ejecuta el servidor de desarrollo:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+4. Visita la app en http://localhost:3000.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Mejoras Futuras
+- Añadir Página de Detalle de Producto: Finalizar la página de detalle del producto con toda la información completa y una interfaz interactiva.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Autenticación de Usuarios: Implementar autenticación de usuarios para permitirles iniciar sesión y gestionar su carrito de compras.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Integración de Pagos: Integrar una pasarela de pagos para ofrecer una experiencia de compra completamente funcional.
 
-## Learn More
+## Conclusión
+Esta plataforma de e-commerce demuestra los principios fundamentales del desarrollo web, incluyendo el renderizado dinámico de páginas, integración con APIs externas y diseño responsivo. A medida que el proyecto avanza, se implementarán características adicionales como las páginas de detalle de producto y la gestión de usuarios.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
