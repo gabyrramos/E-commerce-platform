@@ -30,14 +30,21 @@ Para empezar con el proyecto localmente, sigue estos pasos:
 1. Clona el repositorio:
 
 git clone https://github.com/gabyrramos/E-commerce-platform.git
+
+
 2. Instala las dependencias:
 
 cd E-commerce-platform
 npm install
+
+
 3. Ejecuta el servidor de desarrollo:
 
 npm run dev
+
+
 4. Visita la app en http://localhost:3000.
+
 
 ## Mejoras Futuras
 - Añadir Página de Detalle de Producto: Finalizar la página de detalle del producto con toda la información completa y una interfaz interactiva.
