@@ -37,16 +37,6 @@ const Header: React.FC<HeaderProps> = ({ title = 'My Awesome Store' }) => {
                 Products
               </Link>
             </li>
-            {/* <li>
-              <Link href="/categories" className="text-gray-700 hover:text-blue-600 transition-colors duration-200">
-                Categories
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors duration-200">
-                About Us
-              </Link>
-            </li> */}
             <li>
               <Link href="/cart" className="text-gray-700 hover:text-blue-600 transition-colors duration-200">
                 Cart
@@ -77,12 +67,6 @@ const Header: React.FC<HeaderProps> = ({ title = 'My Awesome Store' }) => {
           <Link href="/products" className="block py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200">
             Products
           </Link>
-          {/* <Link href="/categories" className="block py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200">
-            Categories
-          </Link>
-          <Link href="/about" className="block py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200">
-            About Us
-          </Link> */}
           <Link href="/cart" className="block py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200">
             Cart
           </Link>

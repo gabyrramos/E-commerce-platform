@@ -36,11 +36,6 @@ const ProductFilters: React.FC<ProductFiltersProps> = ({ onFiltersChange, initia
     setSortBy(newSortBy);
     onFiltersChange({ sortBy: newSortBy }); 
   };
-  
-  // Remove this useEffect entirely!
-  // useEffect(() => {
-  //   onFiltersChange({ category, priceRange: { min: minPrice, max: maxPrice }, sortBy });
-  // }, [category, minPrice, maxPrice, sortBy, onFiltersChange]);
 
   return (
     <div className="mb-4">

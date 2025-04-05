@@ -28,7 +28,11 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ params }) => {
         setProduct(data);
       } catch (err) {
         setError('Failed to load product details.');
-        console.error(err);
+        if (err instanceof Error) {
+          console.error(err.message);
+        } else {
+          console.error('An unknown error occurred');
+        }
       } finally {
         setIsLoading(false);
       }
