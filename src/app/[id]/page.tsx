@@ -3,18 +3,18 @@
 import React, { useState, useEffect } from 'react';
 import ProductDetails from '@/components/productdetail/productDetail';
 import { Product } from '@/app/products/page';
+import { useRouter } from 'next/router';
 
-interface ProductDetailPageProps {
-  params: { id: string };
-}
-
-const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ params }) => {
-  const { id } = params;
+const ProductDetailPage: React.FC = () => {
+  const router = useRouter();
+  const { id } = router.query; // Usamos router.query para obtener el id de la URL
   const [product, setProduct] = useState<Product | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    if (!id) return; // Asegúrate de que id esté disponible
+
     const fetchProduct = async () => {
       setIsLoading(true);
       setError(null);
@@ -23,7 +23,7 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ params }) => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        const data = (await response.json()) as Product;
+        const data = await response.json();
         setProduct(data);
       } catch (err) {
         setError('Failed to load product details.');
